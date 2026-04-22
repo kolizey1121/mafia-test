@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mafia Club Admin</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="admin-shell">
+      <aside class="admin-sidebar">
+        <a class="back-home" href="index.html">Приложение игрока</a>
+        <div class="brand-mark admin-brand">
+          <strong>MAFIA</strong>
+          <small>admin</small>
+        </div>
+        <nav class="branch-list" aria-label="Филиалы">
+          <button class="branch active" data-branch="nizh">
+            <span>Нижневартовск</span>
+            <strong>15%</strong>
+          </button>
+          <button class="branch" data-branch="strj">
+            <span>Стрежевой</span>
+            <strong>12%</strong>
+          </button>
+          <button class="branch" data-branch="surgut">
+            <span>Сургут</span>
+            <strong>18%</strong>
+          </button>
+        </nav>
+      </aside>
+
+      <section class="admin-dashboard">
+        <header class="admin-topbar">
+          <div>
+            <p class="kicker">Закрытая панель</p>
+            <h1 id="branchTitle">Филиал: Нижневартовск</h1>
+          </div>
+          <button class="primary-action admin-action">Сформировать отчет</button>
+        </header>
+
+        <section class="admin-cards">
+          <article>
+            <span>Записей</span>
+            <strong id="metricBookings">74</strong>
+          </article>
+          <article>
+            <span>Фактический чек-ин</span>
+            <strong id="metricCheckins">61</strong>
+          </article>
+          <article>
+            <span>Выручка филиала</span>
+            <strong id="metricRevenue">60 390 ₽</strong>
+          </article>
+          <article>
+            <span>Удержание бренда</span>
+            <strong id="metricRoyalty">9 059 ₽</strong>
+          </article>
+        </section>
+
+        <section class="split-panel">
+          <div>
+            <p class="kicker">Расчет выплаты</p>
+            <h2>Деньги поступают франчайзи, процент удерживается автоматически.</h2>
+            <p>
+              Платежная схема должна быть оформлена договором: сервис считает комиссию бренда,
+              платежный провайдер делает split-платеж или удержание по агентской модели.
+            </p>
+          </div>
+          <div class="money-flow">
+            <div>
+              <span>Игроки оплатили</span>
+              <strong id="flowGross">60 390 ₽</strong>
+            </div>
+            <i></i>
+            <div>
+              <span>Бренд удержал</span>
+              <strong id="flowRoyalty">9 059 ₽</strong>
+            </div>
+            <i></i>
+            <div>
+              <span>На счет франчайзи</span>
+              <strong id="flowNet">51 331 ₽</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="admin-table">
+          <header>
+            <h2>Игры филиала</h2>
+            <span id="periodLabel">апрель 2026</span>
+          </header>
+          <div class="table-row table-head">
+            <span>Дата</span>
+            <span>Площадка</span>
+            <span>Запись</span>
+            <span>Чек-ин</span>
+            <span>Выручка</span>
+          </div>
+          <div class="table-row">
+            <span>27.04</span>
+            <span>C.U.L.T</span>
+            <span>25</span>
+            <span>22</span>
+            <span>21 780 ₽</span>
+          </div>
+          <div class="table-row">
+            <span>01.05</span>
+            <span>Мясо-Бар</span>
+            <span>28</span>
+            <span>24</span>
+            <span>23 760 ₽</span>
+          </div>
+          <div class="table-row">
+            <span>08.05</span>
+            <span>Tuman</span>
+            <span>21</span>
+            <span>15</span>
+            <span>14 850 ₽</span>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>

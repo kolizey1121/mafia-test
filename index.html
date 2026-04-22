@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mafia Club App Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="stage">
+      <section class="phone" aria-label="Мобильное приложение Mafia Club">
+        <div class="ambient ambient-red"></div>
+        <div class="ambient ambient-teal"></div>
+        <header class="app-header">
+          <button class="icon-btn" aria-label="Меню">
+            <span></span><span></span>
+          </button>
+          <div class="brand-mark">
+            <strong>MAFIA</strong>
+            <small>club</small>
+          </div>
+          <button class="icon-btn bell" aria-label="Уведомления">
+            <span></span>
+          </button>
+        </header>
+
+        <div class="screen-stack">
+          <section class="screen active" data-screen="home">
+            <div class="hero-panel reveal">
+              <div class="hero-copy">
+                <p class="kicker">Нижневартовск</p>
+                <h1>Убеди.<br>Обмани.<br>Победи.</h1>
+                <p>Официальная запись на игры франчайзи Mafia Club.</p>
+              </div>
+              <div class="card-orbit" aria-hidden="true">
+                <span class="playing-card card-one">A</span>
+                <span class="playing-card card-two">K</span>
+                <span class="playing-card card-three">7</span>
+              </div>
+            </div>
+
+            <div class="city-strip reveal delay-1">
+              <button class="chip active">Все</button>
+              <button class="chip">Нижневартовск</button>
+              <button class="chip">Стрежевой</button>
+              <button class="chip">Сургут</button>
+            </div>
+
+            <div class="section-title reveal delay-2">
+              <span>Игровая афиша</span>
+              <button>Фильтр</button>
+            </div>
+
+            <article class="event-card reveal delay-3" data-event="cult">
+              <div class="event-date">
+                <strong>27</strong>
+                <span>апр</span>
+              </div>
+              <div class="event-info">
+                <p>2-й сезон | 4-я игра</p>
+                <h2>Мафия в C.U.L.T</h2>
+                <span>19:00 · ул. Северная, 29а</span>
+                <div class="capacity">
+                  <i style="--fill: 72%"></i>
+                </div>
+                <small>18 из 25 мест занято</small>
+              </div>
+              <button class="join-btn" data-open-booking>Запись</button>
+            </article>
+
+            <article class="event-card ghost reveal delay-4">
+              <div class="event-date">
+                <strong>01</strong>
+                <span>май</span>
+              </div>
+              <div class="event-info">
+                <p>2-й сезон | 5-я игра</p>
+                <h2>Мафия в Мясо-Бар</h2>
+                <span>20:00 · ТРЦ Югра Молл</span>
+                <div class="capacity">
+                  <i style="--fill: 40%"></i>
+                </div>
+                <small>10 из 25 мест занято</small>
+              </div>
+              <button class="join-btn muted">Запись</button>
+            </article>
+          </section>
+
+          <section class="screen" data-screen="booking">
+            <button class="back-btn" data-screen-target="home">Назад</button>
+            <div class="booking-card reveal">
+              <p class="kicker">Регистрация</p>
+              <h2>Мафия в C.U.L.T</h2>
+              <div class="booking-meta">
+                <span>27.04.2026</span>
+                <span>19:00</span>
+                <span>990 руб.</span>
+              </div>
+              <label>
+                Имя
+                <input value="Александр" aria-label="Имя">
+              </label>
+              <label>
+                Телефон
+                <input value="+7 900 111-22-33" aria-label="Телефон">
+              </label>
+              <label>
+                Количество мест
+                <div class="stepper">
+                  <button data-step="-1">-</button>
+                  <output id="seatCount">2</output>
+                  <button data-step="1">+</button>
+                </div>
+              </label>
+              <button class="primary-action" data-screen-target="ticket">Забронировать</button>
+              <p class="fine-print">Оплата на месте. Франчайзи видит запись и чек-ин в реальном времени.</p>
+            </div>
+          </section>
+
+          <section class="screen" data-screen="ticket">
+            <div class="ticket-card reveal">
+              <p class="kicker">Ваш билет</p>
+              <h2>2 места подтверждены</h2>
+              <div class="qr" aria-label="Демо QR-код">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="ticket-row">
+                <span>Игрок</span>
+                <strong>Александр</strong>
+              </div>
+              <div class="ticket-row">
+                <span>Статус</span>
+                <strong>В списке</strong>
+              </div>
+              <button class="primary-action" data-screen-target="home">Готово</button>
+            </div>
+          </section>
+
+        </div>
+
+        <nav class="tabbar user-tabs" aria-label="Навигация">
+          <button class="tab active" data-screen-target="home">
+            <span class="tab-icon home-icon"></span>
+            <small>Афиша</small>
+          </button>
+          <button class="tab" data-screen-target="booking">
+            <span class="tab-icon seat-icon"></span>
+            <small>Запись</small>
+          </button>
+          <button class="tab" data-screen-target="ticket">
+            <span class="tab-icon qr-icon"></span>
+            <small>Билет</small>
+          </button>
+        </nav>
+      </section>
+
+      <aside class="strategy">
+        <p class="eyebrow">Решение для франшизы</p>
+        <h2>Одна запись для игроков, один источник правды для франчайзи.</h2>
+        <a class="admin-link" href="admin.html">Открыть закрытую админ-панель</a>
+        <div class="strategy-grid">
+          <article>
+            <span>01</span>
+            <h3>Афиша по городам</h3>
+            <p>Каждый франчайзи публикует игры, лимит мест, цену и площадку.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Бронирование</h3>
+            <p>Игрок получает QR-билет, а организатор видит список гостей.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Чек-ин</h3>
+            <p>На входе отмечаются пришедшие, отмены и фактическая посадка.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Роялти</h3>
+            <p>Головной офис видит выручку и процент по каждому городу.</p>
+          </article>
+        </div>
+      </aside>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
